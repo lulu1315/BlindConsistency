@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /shared/foss/BlindConsistency/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fcefd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fcefd.dir/build.make CMakeFiles/cmTC_fcefd.dir/build
+make[1]: Entering directory '/mnt/shared/v18/foss/BlindConsistency/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fcefd.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC    -o CMakeFiles/cmTC_fcefd.dir/CheckSymbolExists.c.o   -c /shared/foss/BlindConsistency/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fcefd
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fcefd.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC     -rdynamic CMakeFiles/cmTC_fcefd.dir/CheckSymbolExists.c.o  -o cmTC_fcefd 
+CMakeFiles/cmTC_fcefd.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fcefd.dir/build.make:86: recipe for target 'cmTC_fcefd' failed
+make[1]: *** [cmTC_fcefd] Error 1
+make[1]: Leaving directory '/mnt/shared/v18/foss/BlindConsistency/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_fcefd/fast' failed
+make: *** [cmTC_fcefd/fast] Error 2
+
+File /shared/foss/BlindConsistency/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /shared/foss/BlindConsistency/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a20fd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a20fd.dir/build.make CMakeFiles/cmTC_a20fd.dir/build
+make[1]: Entering directory '/mnt/shared/v18/foss/BlindConsistency/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a20fd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a20fd.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a20fd
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a20fd.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a20fd.dir/CheckFunctionExists.c.o  -o cmTC_a20fd -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a20fd.dir/build.make:86: recipe for target 'cmTC_a20fd' failed
+make[1]: *** [cmTC_a20fd] Error 1
+make[1]: Leaving directory '/mnt/shared/v18/foss/BlindConsistency/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_a20fd/fast' failed
+make: *** [cmTC_a20fd/fast] Error 2
+
+
