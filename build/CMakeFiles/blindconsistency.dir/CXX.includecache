@@ -118,25 +118,15 @@ CImg.h
 stdint.h
 -
 
-/shared/foss/BlindConsistency/OptFlowPatchMatch.h
-patchmatch/nn.h
-/shared/foss/BlindConsistency/patchmatch/nn.h
-
-/shared/foss/BlindConsistency/patchmatch/allegro_emu.h
-
-/shared/foss/BlindConsistency/patchmatch/nn.h
-allegro_emu.h
-/shared/foss/BlindConsistency/patchmatch/allegro_emu.h
-stdio.h
--
-vector
--
-limits.h
--
-string.h
--
-stdlib.h
--
+/shared/foss/BlindConsistency/OptFlowDeepFlow.h
+opencv2/highgui.hpp
+/shared/foss/BlindConsistency/opencv2/highgui.hpp
+opencv2/video.hpp
+/shared/foss/BlindConsistency/opencv2/video.hpp
+opencv2/optflow.hpp
+/shared/foss/BlindConsistency/opencv2/optflow.hpp
+opencv2/core/ocl.hpp
+/shared/foss/BlindConsistency/opencv2/core/ocl.hpp
 omp.h
 -
 
@@ -169,8 +159,8 @@ omp.h
 -
 string
 -
-OptFlowPatchMatch.h
-/shared/foss/BlindConsistency/OptFlowPatchMatch.h
+OptFlowDeepFlow.h
+/shared/foss/BlindConsistency/OptFlowDeepFlow.h
 CImg/CImg.h
 /shared/foss/BlindConsistency/CImg/CImg.h
 
@@ -457,6 +447,10 @@ initializer_list
 /usr/local/include/opencv2/core/neon_utils.hpp
 opencv2/core/cvdef.h
 /usr/local/include/opencv2/core/opencv2/core/cvdef.h
+
+/usr/local/include/opencv2/core/ocl.hpp
+opencv2/core.hpp
+/usr/local/include/opencv2/core/opencv2/core.hpp
 
 /usr/local/include/opencv2/core/operations.hpp
 cstdio
@@ -1207,6 +1201,34 @@ opencv2/cudawarping.hpp
 /usr/local/include/opencv2/opencv2/cudawarping.hpp
 
 /usr/local/include/opencv2/opencv_modules.hpp
+
+/usr/local/include/opencv2/optflow.hpp
+opencv2/core.hpp
+/usr/local/include/opencv2/opencv2/core.hpp
+opencv2/video.hpp
+/usr/local/include/opencv2/opencv2/video.hpp
+opencv2/optflow/pcaflow.hpp
+/usr/local/include/opencv2/opencv2/optflow/pcaflow.hpp
+opencv2/optflow/sparse_matching_gpc.hpp
+/usr/local/include/opencv2/opencv2/optflow/sparse_matching_gpc.hpp
+opencv2/optflow/motempl.hpp
+/usr/local/include/opencv2/opencv2/optflow/motempl.hpp
+
+/usr/local/include/opencv2/optflow/motempl.hpp
+opencv2/core.hpp
+/usr/local/include/opencv2/optflow/opencv2/core.hpp
+
+/usr/local/include/opencv2/optflow/pcaflow.hpp
+opencv2/core.hpp
+/usr/local/include/opencv2/optflow/opencv2/core.hpp
+opencv2/video.hpp
+/usr/local/include/opencv2/optflow/opencv2/video.hpp
+
+/usr/local/include/opencv2/optflow/sparse_matching_gpc.hpp
+opencv2/core.hpp
+/usr/local/include/opencv2/optflow/opencv2/core.hpp
+opencv2/imgproc.hpp
+/usr/local/include/opencv2/optflow/opencv2/imgproc.hpp
 
 /usr/local/include/opencv2/photo.hpp
 opencv2/core.hpp

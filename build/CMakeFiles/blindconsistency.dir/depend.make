@@ -42,9 +42,7 @@ CMakeFiles/blindconsistency.dir/patchmatch/vecnn.o: ../patchmatch/vecnn.h
 CMakeFiles/blindconsistency.dir/patchmatch/vecnn.o: ../patchmatch/vecpatch.h
 
 CMakeFiles/blindconsistency.dir/regularization.o: ../CImg/CImg.h
-CMakeFiles/blindconsistency.dir/regularization.o: ../OptFlowPatchMatch.h
-CMakeFiles/blindconsistency.dir/regularization.o: ../patchmatch/allegro_emu.h
-CMakeFiles/blindconsistency.dir/regularization.o: ../patchmatch/nn.h
+CMakeFiles/blindconsistency.dir/regularization.o: ../OptFlowDeepFlow.h
 CMakeFiles/blindconsistency.dir/regularization.o: ../regularization.cpp
 CMakeFiles/blindconsistency.dir/regularization.o: ../regularization.h
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv/cv.h
@@ -73,6 +71,7 @@ CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/cor
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/core/mat.inl.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/core/matx.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/core/neon_utils.hpp
+CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/core/ocl.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/core/operations.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/core/optim.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/core/ovx.hpp
@@ -147,6 +146,10 @@ CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/obj
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/objdetect/objdetect_c.h
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/opencv.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/opencv_modules.hpp
+CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/optflow.hpp
+CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/optflow/motempl.hpp
+CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/optflow/pcaflow.hpp
+CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/optflow/sparse_matching_gpc.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/photo.hpp
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/photo/photo_c.h
 CMakeFiles/blindconsistency.dir/regularization.o: /usr/local/include/opencv2/shape.hpp

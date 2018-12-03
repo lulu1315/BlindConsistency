@@ -38,7 +38,8 @@
 
 #include <omp.h>
 #include <string>
-#include "OptFlowPatchMatch.h"
+//#include "OptFlowPatchMatch.h"
+#include "OptFlowDeepFlow.h"
 #include "CImg/CImg.h"
 
 
@@ -65,8 +66,9 @@ double get_weight(const T* cur_frame, const T* prev_frame, int W, int H, const f
 	const double s = 0.05;
 	double w = exp(-(sqr(otherVal0 - cur_frame[pix*3]) + sqr(otherVal1 - cur_frame[pix*3+1]) + sqr(otherVal2 - cur_frame[pix*3+2]))/(2.*s*s));
 
-	if ((flow[pix*2] >= W - 2) || (flow[pix*2] <= 2)
-		|| (flow[pix*2+1] >= H - 2) || (flow[pix*2+1] <= 2)) {  // going outside of the image area
+    int borders=5;
+	if ((flow[pix*2] >= W - borders) || (flow[pix*2] <= borders)
+		|| (flow[pix*2+1] >= H - borders) || (flow[pix*2+1] <= borders)) {  // going outside of the image area
 		w = 0.0000;
 	}
 
@@ -156,8 +158,10 @@ void solve_frame(const T* prevInput, const T* curInput, const T* curProcessed, c
 	}
 
 	//std::vector<float> optflowBackward(W*H*2);	
-	opt_flow_patchmatch<T>(curInput, prevInput, W, H, &optflowBackward[0]);
-	
+	//opt_flow_patchmatch<T>(curInput, prevInput, W, H, &optflowBackward[0]);
+	printf("processing deepflow\n");
+	opt_flow_deepflow<T>(curInput, prevInput, W, H, &optflowBackward[0]);
+    
 	//build RHS and weights
 	std::vector<T> rhs(W*H*3, 0.);
 	std::vector<T> diag(W*H, 0.);
